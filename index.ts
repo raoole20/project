@@ -23,6 +23,6 @@ app.listen(PORT, () => {
 
     mongoose.connect(MONGO_URI)
         .then(() => LogSuccess('Se a connectado a la base de datos'))
-        .catch(() => LogError('No se a podido iniciar el servidor') )
+        .catch(() => LogError('No se a podido conectar a la base de datos') )
 })
 

@@ -7,11 +7,13 @@ import { ObjectId } from 'mongoose'
 
 export interface UserI {
     name: string
-    perfilPhoto: string
+    lastname: string
+    username: string
+    bio: string
+    foto: string
     password: string
     email: string
     tweets: TweetsI[]
-    bio: string
 }
 
 export interface TweetsI {

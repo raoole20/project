@@ -5,13 +5,20 @@ export const registerValidator = () => [
         .exists()
         .isString()
         .isLength({ min: 3 }),
+    body('lastname')
+        .exists()
+        .isString()
+        .isLength({ min: 3 }),
+    body('username')
+        .exists()
+        .isString()
+        .isLength({ min: 3 }),
     body('email')
         .exists()
         .isEmail(),
     body('password')
         .exists()
         .isString()
-    // .matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/, "i")
 ]
 
 export const loginValidator = () => [

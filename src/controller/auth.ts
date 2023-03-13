@@ -59,7 +59,8 @@ export class AuthController {
         }
 
         const token = createJWT({
-            email: user.email
+            email: user.email,
+            id: user._id
         })
 
         delete user.password

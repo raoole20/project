@@ -29,6 +29,20 @@ export const findUserByEmail = async (email: string) => {
     }
 }
 
+export const findUserById =async (id:string) => {
+    const model = userEntity()
+
+    try {
+        const user = await model.findById(id)
+        return user
+    } catch (error: any) {
+        return {
+            error: true,
+            message: error.message
+        }
+    }
+}
+
 
 const handleError = async (error: any) => {
     if(error.code === 11000) 

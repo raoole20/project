@@ -8,6 +8,10 @@ export const createJWT = (payload: any) => {
     } )
 } 
 
-export const validateJWT = (token: string) => {
-    return jwt.verify(token, key)
+export const validateJWT = async (token: string) => {
+    try {
+        return await jwt.verify(token, key)
+    } catch (error) {
+        console.log(error)
+    }
 }
